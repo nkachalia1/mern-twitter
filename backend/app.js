@@ -1,10 +1,10 @@
 const debug = require('debug');
-
 const express = require("express");
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 
+require('./models/Tweet'); // <--ADD THIS LINE
 require('./config/passport'); // <-- ADD THIS LINE
 const passport = require('passport'); // <-- ADD THIS LINE
 
