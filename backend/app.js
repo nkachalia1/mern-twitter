@@ -4,6 +4,11 @@ const express = require("express");
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+
+require('./config/passport'); // <-- ADD THIS LINE
+const passport = require('passport'); // <-- ADD THIS LINE
+
+app.use(passport.initialize());
 const cors = require('cors');
 const csurf = require('csurf');
 const { isProduction } = require('./config/keys');
